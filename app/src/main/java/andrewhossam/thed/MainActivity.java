@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
 
         queue = Volley.newRequestQueue(this);
-        mLayoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
+        mLayoutManager = new StaggeredGridLayoutManager(getResources().getInteger(R.integer.col), StaggeredGridLayoutManager.VERTICAL);
         mRecyclerView.setLayoutManager(mLayoutManager);
         loadNextDataFromApi(pageNo++);
 
